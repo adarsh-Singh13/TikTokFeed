@@ -5,8 +5,11 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
+import React from 'react';
+import 'react-native-gesture-handler';
+import 'react-native-reanimated';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import RootNavigator from './src/navigators/RootNavigator';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -14,7 +17,7 @@ function App() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+      <RootNavigator/>
     </View>
   );
 }
