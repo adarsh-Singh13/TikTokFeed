@@ -10,15 +10,16 @@ import 'react-native-gesture-handler';
 import 'react-native-reanimated';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import RootNavigator from './src/navigators/RootNavigator';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <View style={styles.container}>
+    <SafeAreaProvider style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <RootNavigator/>
-    </View>
+    </SafeAreaProvider>
   );
 }
 
