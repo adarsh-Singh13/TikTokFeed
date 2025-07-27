@@ -13,7 +13,7 @@ import FontAwesome from '@react-native-vector-icons/fontawesome';
 const Tab = createBottomTabNavigator();
 
 export default function MyBottomTabs() {
-  const isDarkMode = useSelector((state) => state.theme.isDark);
+  const isDarkMode = useSelector((state) => state.common.isDark);
 
   const backgroundColor = isDarkMode ? Colors.black : Colors.white;
   const activeColor = isDarkMode ? Colors.primary : Colors.black;

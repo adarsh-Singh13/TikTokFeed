@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { DrawerItem, DrawerContentScrollView } from '@react-navigation/drawer';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleTheme as toggleThemeAction } from '../../redux/commonSlice/themeSlice';
+import { toggleTheme as toggleThemeAction } from '../../redux/commonSlice/commonSlice';
 import Colors from '../../utility/Colors';
 import CustomSwitchButton from '../../components/CustomSwitchBtn/CustomSwitchButton';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
@@ -10,7 +10,7 @@ import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 
 export default function MyDrawer(props) {
   const { state, navigation } = props;
-  const isDarkMode = useSelector(state => state.theme.isDark);
+  const isDarkMode = useSelector(state => state.common.isDark);
   const dispatch = useDispatch();
 
   const toggleTheme = () => dispatch(toggleThemeAction());
