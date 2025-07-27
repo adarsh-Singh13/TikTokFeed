@@ -5,6 +5,7 @@ import {
   View,
   Animated,
 } from 'react-native';
+import Colors from '../../utility/Colors';
 
 export default function CustomSwitchButton({ onPress, value, style }) {
   const animation = useRef(new Animated.Value(value ? 1 : 0)).current;
@@ -36,7 +37,7 @@ export default function CustomSwitchButton({ onPress, value, style }) {
 
   const circleTranslateX = animation.interpolate({
     inputRange: [0, 1],
-    outputRange: [2, 46], // slide the circle
+    outputRange: [2, 25], // slide the circle
   });
 
   return (
@@ -51,7 +52,7 @@ export default function CustomSwitchButton({ onPress, value, style }) {
     >
       <Animated.Text style={[styles.text, 
       {textAlign: value ? 'left' : 'right',
-        left: value ? 8 : -8,
+        left: value ? 2 : -2,
       },
         { opacity: textOpacity }]}>
         {displayedText}
@@ -70,13 +71,16 @@ export default function CustomSwitchButton({ onPress, value, style }) {
 
 const styles = StyleSheet.create({
   container: {
-    width: 70,
+    width: 50,
     height: 26,
     borderRadius: 20,
     paddingHorizontal: 4,
     backgroundColor: '#ccc',
     justifyContent: 'center',
     position: 'relative',
+  },
+  containerOff: {
+    backgroundColor: Colors.darkGray,
   },
   containerOn: {
     backgroundColor: '#4CAF50',
@@ -88,13 +92,13 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     backgroundColor: '#fff',
     top: 3,
-    left: 2,
+    left: 1,
     zIndex: 1,
   },
   text: {
     color: '#fff',
     fontWeight: 'bold',
     zIndex: 0,
-    fontSize: 12,
+    fontSize: 8,
   },
 });

@@ -11,14 +11,18 @@ import 'react-native-reanimated';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import RootNavigator from './src/navigators/RootNavigator';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Provider } from 'react-redux';
+import store from './src/redux/store/store';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <SafeAreaProvider style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <RootNavigator/>
+      <Provider store={store}>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <RootNavigator />
+      </Provider>
     </SafeAreaProvider>
   );
 }
