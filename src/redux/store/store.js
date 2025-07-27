@@ -1,10 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
-import themeReducer from '../commonSlice/themeSlice';
+import { configureStore } from '@reduxjs/toolkit';
+import commonReducer from '../commonSlice/commonSlice'; // ✅ Path fixed with semicolon
 
 const store = configureStore({
-    reducer: {
-        theme: themeReducer,
-    },
+  reducer: {
+    common: commonReducer,
+  },
+   middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      // serializableCheck: false,
+    }),
 });
 
 export default store;

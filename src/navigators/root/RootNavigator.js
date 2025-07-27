@@ -1,17 +1,21 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import MyDrawer from './myDrawer/MyDrawer';
-import MyBottomTabs from './myBottomTab/MyBottomTabs';
+import MyDrawer from '../myDrawer/MyDrawer';
+import MyBottomTabs from '../myBottomTab/MyBottomTabs';
+import { navigationRef } from '../../utility/NavigationService';
 
 const Drawer = createDrawerNavigator();
 
-export default function RootNavigator() {
+export default function RootNavigator({ onNavigationStateChange }) {
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      onStateChange={onNavigationStateChange}
+      ref={navigationRef}
+    >
       <Drawer.Navigator
         initialRouteName="MainTabs"
-        drawerContent={props => <MyDrawer {...props} />}
+        drawerContent={(props) => <MyDrawer {...props} />}
         screenOptions={{
           headerShown: false,
           drawerType: 'front',
@@ -26,9 +30,8 @@ export default function RootNavigator() {
           },
         }}
       >
-        {/* 🟢 Only one screen inside Drawer: MyBottomTabs */}
         <Drawer.Screen name="MainTabs" component={MyBottomTabs} options={{ title: 'Home' }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
-}
+};
