@@ -1,19 +1,29 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Appearance } from 'react-native';
 import { DrawerItem, DrawerContentScrollView } from '@react-navigation/drawer';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleTheme as toggleThemeAction } from '../../redux/commonSlice/commonSlice';
 import Colors from '../../utility/Colors';
-import CustomSwitchButton from '../../components/CustomSwitchBtn/CustomSwitchButton';
+import CustomSwitchButton from '../../components/customSwitchBtn/CustomSwitchButton';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
+import { setThemeMode } from '../../redux/commonSlice/commonSlice';
 
 export default function MyDrawer(props) {
   const { state, navigation } = props;
   const isDarkMode = useSelector(state => state.common.isDark);
+  const themeMode = useSelector(state => state.common.themeMode);
   const dispatch = useDispatch();
+  const toggleTheme = () => {
+    if (themeMode === 'light') {
+      dispatch(setThemeMode('dark'));
+    } else if (themeMode === 'dark') {
+      dispatch(setThemeMode('system'));
+    } else {
+      // system → light
+      dispatch(setThemeMode('light'));
+    }
+  };
 
-  const toggleTheme = () => dispatch(toggleThemeAction());
 
   const backgroundColor = isDarkMode ? Colors.black : Colors.white;
   const textColor = isDarkMode ? Colors.white : Colors.black;
