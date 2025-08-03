@@ -17,12 +17,12 @@ import { closeBottomSheet } from '../../redux/commonSlice/commonSlice';
 const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 const MAX_TRANSLATE_Y = -SCREEN_HEIGHT + 50;
 
-const BottomSheet = React.forwardRef(({ }, ref) => {
-    const dispatch = useDispatch();
-   const { component: ContentComponent, props: contentProps } = useSelector(
+const BottomSheet = React.forwardRef(({ close, theme }, ref) => {
+  const dispatch = useDispatch();
+  const { component: ContentComponent, props: contentProps } = useSelector(
     state => state.common.bottomSheetContent
   );
-
+  
   const translateY = useSharedValue(0);
   const context = useSharedValue({ y: 0 });
   const active = useSharedValue(false);
@@ -34,21 +34,18 @@ const BottomSheet = React.forwardRef(({ }, ref) => {
       damping: 20,
       stiffness: 90,
     });
-  }, [])
-
-  // Open bottom sheet to 1/3rd height
-  useEffect(() => {
-    scrollTo(-SCREEN_HEIGHT / 3);
   }, []);
 
   const isActive = useCallback(() => {
     return active.value;
-  })
+  });
+
   useImperativeHandle(ref, () => ({ scrollTo, isActive }), [scrollTo, isActive]);
 
   const closeSheet = () => {
-  dispatch(closeBottomSheet());
-};
+    close?.(); // from props
+    dispatch(closeBottomSheet());
+  };
 
   const gesture = Gesture.Pan()
     .onStart(() => {
@@ -63,13 +60,12 @@ const BottomSheet = React.forwardRef(({ }, ref) => {
       const thresholdToExpand = -SCREEN_HEIGHT * 0.70;
 
       if (draggedY > -SCREEN_HEIGHT / 3.5) {
-        runOnJS(closeSheet)(); // <== This is correct
+        runOnJS(closeSheet)();
         scrollTo(0);
       } else if (draggedY < thresholdToExpand) {
         scrollTo(MAX_TRANSLATE_Y);
       }
     });
-
 
   const bottomSheetStyle = useAnimatedStyle(() => {
     const borderRadius = interpolate(
@@ -86,10 +82,11 @@ const BottomSheet = React.forwardRef(({ }, ref) => {
     };
   });
 
-  
-   return (
+  const backgroundColor = theme ? Colors.black: Colors.white
+
+  return (
     <GestureDetector gesture={gesture}>
-      <Animated.View style={[styles.container, bottomSheetStyle]}>
+      <Animated.View style={[styles.container, bottomSheetStyle, {backgroundColor}]}>
         <View style={styles.line} />
         {ContentComponent && <ContentComponent {...contentProps} />}
       </Animated.View>
@@ -103,7 +100,6 @@ const styles = StyleSheet.create({
     top: SCREEN_HEIGHT,
     height: SCREEN_HEIGHT,
     width: '100%',
-    backgroundColor: '#fff',
     padding: 16,
   },
   line: {

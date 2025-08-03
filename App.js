@@ -1,28 +1,50 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
-import 'react-native-gesture-handler';
-import 'react-native-reanimated';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import RootNavigator from './src/navigators/root/RootNavigator';
+// App.js or MainApp.js
+import React, { useEffect } from 'react';
+import { Appearance, StatusBar, StyleSheet } from 'react-native';
+import { PaperProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch, useSelector } from 'react-redux';
 import store from './src/redux/store/store';
 import RootScreen from './src/navigators/root/RootScreen';
+import { useSystemThemeSync } from './src/redux/systemUtilityHook/syncSystemTheme';
+import { darkTheme, lightTheme } from './src/screens/home/theme';
+import { syncSystemTheme } from './src/redux/commonSlice/commonSlice';
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
 
+function MainApp() {
+  useSystemThemeSync();
+
+  // 🟢 Read theme from Redux
+  const dispatch = useDispatch();
+  const isDark = useSelector((state) => state.common.isDark);
+  const theme = isDark ? darkTheme : lightTheme;
+  const themeMode = useSelector(state => state.common.themeMode);
+  useEffect(() => {
+    dispatch(syncSystemTheme());
+  }, []);
+
+
+  useEffect(() => {
+    const subscription = Appearance.addChangeListener(() => {
+      dispatch(syncSystemTheme());
+    });
+    return () => subscription.remove();
+  }, [dispatch, themeMode]);
+
+
+  return (
+    <PaperProvider theme={theme}>
+      <StatusBar barStyle={isDark ? 'light-content' : 'dark-content'} />
+      <RootScreen />
+    </PaperProvider>
+  );
+}
+
+export default function App() {
   return (
     <SafeAreaProvider style={styles.container}>
       <Provider store={store}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <RootScreen/>
+        <MainApp />
       </Provider>
     </SafeAreaProvider>
   );
@@ -33,5 +55,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-export default App;
