@@ -1,14 +1,17 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import SearchScreen from '../../screens/search/SearchScreen';
-import ProfileScreen from '../../screens/profile/ProfileScreen';
-import MyFeedScreen from '../../screens/feed/MyFeedScreen';
-import HomeScreen from '../../screens/home/HomeScreen';
-import CreateVideoScreen from '../../screens/createVideo/CreateVideoScreen';
 import { useSelector } from 'react-redux';
 import Colors from '../../utility/Colors';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
+import HomeScreen from '../../screens/Home/HomeScreen';
+import MyFeedScreen from '../../screens/Feed/MyFeedScreen';
+import CreateVideoScreen from '../../screens/CreateVideo/CreateVideoScreen';
+import SearchScreen from '../../screens/Search/SearchScreen';
+import ProfileScreen from '../../screens/Profile/ProfileScreen';
+// *
+// Custom Local Imports
+
 
 const Tab = createBottomTabNavigator();
 
