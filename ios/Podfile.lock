@@ -1771,11 +1771,11 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - react-native-vector-icons-evil-icons (12.2.0)
-  - react-native-vector-icons-fontawesome (12.2.0)
-  - react-native-vector-icons-fontawesome6 (12.1.0)
-  - react-native-vector-icons-ionicons (12.2.0)
-  - react-native-vector-icons-material-design-icons (12.2.0)
+  - react-native-vector-icons-evil-icons (12.3.0)
+  - react-native-vector-icons-fontawesome (12.3.0)
+  - react-native-vector-icons-fontawesome6 (12.2.0)
+  - react-native-vector-icons-ionicons (12.3.0)
+  - react-native-vector-icons-material-design-icons (12.3.0)
   - React-NativeModulesApple (0.80.1):
     - boost
     - DoubleConversion
@@ -2308,7 +2308,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - RNReanimated (3.20.0-nightly-20250723-b6c8b9a3c):
+  - RNReanimated (3.19.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -2335,11 +2335,11 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNReanimated/reanimated (= 3.20.0-nightly-20250723-b6c8b9a3c)
-    - RNReanimated/worklets (= 3.20.0-nightly-20250723-b6c8b9a3c)
+    - RNReanimated/reanimated (= 3.19.0)
+    - RNReanimated/worklets (= 3.19.0)
     - SocketRocket
     - Yoga
-  - RNReanimated/reanimated (3.20.0-nightly-20250723-b6c8b9a3c):
+  - RNReanimated/reanimated (3.19.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -2366,10 +2366,10 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNReanimated/reanimated/apple (= 3.20.0-nightly-20250723-b6c8b9a3c)
+    - RNReanimated/reanimated/apple (= 3.19.0)
     - SocketRocket
     - Yoga
-  - RNReanimated/reanimated/apple (3.20.0-nightly-20250723-b6c8b9a3c):
+  - RNReanimated/reanimated/apple (3.19.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -2398,7 +2398,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - RNReanimated/worklets (3.20.0-nightly-20250723-b6c8b9a3c):
+  - RNReanimated/worklets (3.19.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -2425,10 +2425,10 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNReanimated/worklets/apple (= 3.20.0-nightly-20250723-b6c8b9a3c)
+    - RNReanimated/worklets/apple (= 3.19.0)
     - SocketRocket
     - Yoga
-  - RNReanimated/worklets/apple (3.20.0-nightly-20250723-b6c8b9a3c):
+  - RNReanimated/worklets/apple (3.19.0):
     - boost
     - DoubleConversion
     - fast_float
@@ -2828,11 +2828,11 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: d9499269ad1f484ae71319bac1d9231447f2094e
   react-native-safe-area-context: 68d1363b8354472a961aa6861ba8451beaf9a810
   react-native-skia: a41aa775aca8cd5695f88a6e486ca06754542e17
-  react-native-vector-icons-evil-icons: 02639805c4abca8068d963117d3342f8e90c649d
-  react-native-vector-icons-fontawesome: d43f957518db58e1c9658d38f6aeacf25c741934
-  react-native-vector-icons-fontawesome6: 2aed838cc3341d13e8eb0541929a74a16f62348d
-  react-native-vector-icons-ionicons: 3a23bfb6ac5e5c44d822f37107afa50718f3cf31
-  react-native-vector-icons-material-design-icons: e406b4fc1787999a5d150c897837150543e90b9c
+  react-native-vector-icons-evil-icons: 74d1fe2b104d1b4286359313713c7a4a9dcef1be
+  react-native-vector-icons-fontawesome: c41fd08991989b71fe79c68ebb3ee30ac221178e
+  react-native-vector-icons-fontawesome6: 1b667969bef2f430d1d7515163b980b856f58670
+  react-native-vector-icons-ionicons: ad07e944a092a5cf71b8b569d8f5ce2bf674c415
+  react-native-vector-icons-material-design-icons: c502df5b988ce85d6c7d2b7ee909818315760b82
   React-NativeModulesApple: 983f3483ef0a3446b56d490f09d579fba2442e17
   React-oscompat: 114036cd8f064558c9c1a0c04fc9ae5e1453706a
   React-perflogger: e7287fee27c16e3c8bd4d470f2361572b63be16b
@@ -2866,7 +2866,7 @@ SPEC CHECKSUMS:
   ReactCommon: 17fd88849a174bf9ce45461912291aca711410fc
   RNCMaskedView: 7e0ce15656772a939ff0d269100bca3a182163c8
   RNGestureHandler: a0c83d8e4422f2ac04d1acb1741866a5184c7b73
-  RNReanimated: a30bcad794a365965f528db265b6f6f2c8b70ec2
+  RNReanimated: 5ee070eb08e681be2a9ee7e797019d97d4706131
   RNScreens: c63849403489bd068ea160f276fbc8416f19f2f7
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: daa1e4de4b971b977b23bc842aaa3e135324f1f3

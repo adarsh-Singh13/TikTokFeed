@@ -1,9 +1,9 @@
 import { View, Dimensions } from 'react-native';
 import React, { useRef, useEffect } from 'react';
 import RootNavigator from './RootNavigator';
-import BottomSheet from '../../components/bottomSheet/BottomSheet';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeBottomSheet } from '../../redux/commonSlice/commonSlice';
+import BottomSheet from '../../components/BottomSheet/BottomSheet';
 
 const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
@@ -43,7 +43,7 @@ export default function RootScreen({ screenChanged }) {
   return (
     <View style={{ flex: 1 }}>
       <RootNavigator onNavigationStateChange={onNavigationStateChange} />
-      <BottomSheet 
+      <BottomSheet
         ref={bottomSheetRef}
         close={() => dispatch(closeBottomSheet())}
         visible={bottomSheetVisible}

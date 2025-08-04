@@ -3,10 +3,10 @@ import { Text, View, StyleSheet, Appearance } from 'react-native';
 import { DrawerItem, DrawerContentScrollView } from '@react-navigation/drawer';
 import { useDispatch, useSelector } from 'react-redux';
 import Colors from '../../utility/Colors';
-import CustomSwitchButton from '../../components/customSwitchBtn/CustomSwitchButton';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 import { setThemeMode } from '../../redux/commonSlice/commonSlice';
+import CustomSwitchButton from '../../components/CustomSwitchBtn/CustomSwitchButton';
 
 export default function MyDrawer(props) {
   const { state, navigation } = props;

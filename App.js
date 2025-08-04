@@ -7,8 +7,8 @@ import { Provider, useDispatch, useSelector } from 'react-redux';
 import store from './src/redux/store/store';
 import RootScreen from './src/navigators/root/RootScreen';
 import { useSystemThemeSync } from './src/redux/systemUtilityHook/syncSystemTheme';
-import { darkTheme, lightTheme } from './src/screens/home/theme';
 import { syncSystemTheme } from './src/redux/commonSlice/commonSlice';
+import { darkTheme, lightTheme } from './src/screens/Home/theme';
 
 
 function MainApp() {
