@@ -10,6 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-firebase/app": "^23.0.0",
+    "@react-native-firebase/auth": "^23.0.0",
+    "@react-native-firebase/firestore": "^23.0.0",
+    "@react-native-google-signin/google-signin": "^15.0.0",
     "@react-native-masked-view/masked-view": "^0.3.2",
     "@react-native-vector-icons/evil-icons": "^12.2.0",
     "@react-native-vector-icons/fontawesome": "^12.2.0",
@@ -59,5 +63,5 @@
   },
   "resolutions": {
     "react-native-reanimated": "3.19.0"
-}
+  }
 }

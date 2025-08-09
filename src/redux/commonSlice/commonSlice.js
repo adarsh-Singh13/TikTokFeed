@@ -15,6 +15,7 @@ const commonSlice = createSlice({
             component: null,
             props: {},
         },
+        isDrawerOpen: false,
     },
     reducers: {
         setThemeMode: (state, action) => {
@@ -46,7 +47,13 @@ const commonSlice = createSlice({
                 ...state.bottomSheetContent.props,
                 ...action.payload,
             };
-        }
+        },
+        setDrawerOpen : (state, payload) => {
+            state.isDrawerOpen = action.payload
+        },
+        toggleDrawer: (state) => {
+            state.isDrawerOpen = !state.isDrawerOpen
+        }, 
     },
 });
 
@@ -56,6 +63,8 @@ export const {
     openBottomSheet,
     closeBottomSheet,
     setBottomSheetProps,
+    setDrawerOpen,
+    toggleDrawer,
 } = commonSlice.actions;
 
 export default commonSlice.reducer;

@@ -19,19 +19,32 @@ const CustomHeader = ({
   onSettingsPress,
   onFilterPress,
   containerStyle,
+  headerStyle,
+  onPersonIconPress
 }) => {
   return (
-    <View style={[styles.container, containerStyle]}>
+    <View  style={[styles.container, containerStyle]}>
+      <TouchableOpacity 
+        onPress={onPersonIconPress}
+      >
       {userImage ? (
-        <Image source={{ uri: userImage }} style={styles.userImage} />
+        <Image
+          source={{ uri: userImage }}
+          style={styles.userImage}
+        />
       ) : (
         <View style={styles.userImagePlaceholder}>
-            <Icon name="person-circle-outline" size={50} color={Colors.gray} />
+          <Icon
+            name="person-circle-outline"
+            size={50}
+            color={Colors.gray}
+          />
         </View>
       )}
+      </TouchableOpacity>
 
       {headerText ? (
-        <Text style={styles.headerText}>{headerText}</Text>
+        <Text style={[styles.headerText, headerStyle]}>{headerText}</Text>
       ) : (
         <View style={{ flex: 1 }} />
       )}
