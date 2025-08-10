@@ -1,4 +1,3 @@
-// App.js or MainApp.js
 import React, { useEffect } from 'react';
 import { Appearance, StatusBar, StyleSheet } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
@@ -9,21 +8,23 @@ import RootScreen from './src/navigators/root/RootScreen';
 import { useSystemThemeSync } from './src/redux/systemUtilityHook/syncSystemTheme';
 import { syncSystemTheme } from './src/redux/commonSlice/commonSlice';
 import { darkTheme, lightTheme } from './src/utility/theme';
-
+import auth from '@react-native-firebase/auth';
+import { loggedIn, loggedOut } from './src/redux/authSlice/authSlice';
 
 function MainApp() {
   useSystemThemeSync();
 
-  // 🟢 Read theme from Redux
   const dispatch = useDispatch();
   const isDark = useSelector((state) => state.common.isDark);
   const theme = isDark ? darkTheme : lightTheme;
   const themeMode = useSelector(state => state.common.themeMode);
+
+  // Sync system theme on mount
   useEffect(() => {
     dispatch(syncSystemTheme());
-  }, []);
+  }, [dispatch]);
 
-
+  // Listen for system theme changes
   useEffect(() => {
     const subscription = Appearance.addChangeListener(() => {
       dispatch(syncSystemTheme());
@@ -31,6 +32,17 @@ function MainApp() {
     return () => subscription.remove();
   }, [dispatch, themeMode]);
 
+  // For the Firebase Auth state changes (Persistent Login)
+  useEffect(() => {
+    const unsubscribe = auth().onAuthStateChanged(user => {
+      if (user) {
+        dispatch(loggedIn());
+      } else {
+        dispatch(loggedOut());
+      }
+    });
+    return unsubscribe;
+  }, [dispatch]);
 
   return (
     <PaperProvider theme={theme}>

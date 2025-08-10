@@ -2,11 +2,11 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Colors from '../../utility/Colors';
 
-const GenericRadioButton = ({ label, selected, onPress }) => {
+const GenericRadioButton = ({ label, selected, onPress, mode }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <View style={styles.radioCircle}>
-        {selected && <View style={styles.selectedRb} />}
+      <View style={[styles.radioCircle, {borderColor: mode ? Colors.white: Colors.primary}]}>
+        {selected && <View style={[styles.selectedRb, {backgroundColor: mode? Colors.white: Colors.primary}]} />}
       </View>
       <Text style={styles.radioText}>{label}</Text>
     </TouchableOpacity>
@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     width: 20,
     borderRadius: 10,
     borderWidth: 2,
-    borderColor: Colors.white,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -32,7 +31,6 @@ const styles = StyleSheet.create({
     width: 10,
     height: 10,
     borderRadius: 5,
-    backgroundColor: Colors.primary,
   },
   radioText: {
     marginLeft: 10,

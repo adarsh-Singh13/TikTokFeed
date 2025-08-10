@@ -1,14 +1,13 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, Platform } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import Colors from '../../utility/Colors';
-import HomeScreenBackground from '../../components/backroundScreen/HomeScreenBackground';
+import HomeScreenBackground from '../../../components/backroundScreen/HomeScreenBackground';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import CustomHeader from '../../components/customHeader/CustomHeader';
-import { toggleDrawer } from '../../redux/commonSlice/commonSlice';
-import NavigationService from '../../utility/NavigationService';
-import { Fonts } from '../../utility/Fonts';
-import ExpandableThemeList from '../../components/expandableTheme/ExpandableThemeList';
+import CustomHeader from '../../../components/customHeader/CustomHeader';
+import { toggleDrawer } from '../../../redux/commonSlice/commonSlice';
+import { Fonts } from '../../../utility/Fonts';
+import ExpandableThemeList from '../../../components/expandableTheme/ExpandableThemeList';
+import Colors from '../../../utility/Colors';
 
 const {HEIGHT, WIDTH} = Dimensions.get('window')
 
@@ -32,6 +31,7 @@ const SettingsScreen = ({ navigation }) => {
           headerStyle={styles.header}
           containerStyle={styles.headerContainer}
           onPersonIconPress={handlePressIcon}
+          mode={isDarkMode}
         />
         <View style={styles.imageContainer}>
           <View style={styles.imagewrap}>
@@ -43,10 +43,10 @@ const SettingsScreen = ({ navigation }) => {
               style={styles.image}
             />
           </View>
-          <Text>Supertech 14th Avenue</Text>
+          <Text style={[styles.prfTxt, {color: isDarkMode ? Colors.white: Colors.black}]}>Supertech 14th Avenue</Text>
         </View>
         <View style={styles.prefrence}>
-          <Text style={styles.prfTxt}>Preferences</Text>
+          <Text style={[styles.prfTxt, {color: isDarkMode ? Colors.white: Colors.black}]}>Preferences</Text>
         </View>
         <View style={{flex: 1, top: 16}}>
         <ExpandableThemeList 
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
    marginTop: 32,
   },
   prfTxt: {
-    fontFamily: Fonts.fontMedium.font,
-    fontWeight: Fonts.fontMedium.fontWeight
+    fontFamily: Platform.OS === 'ios'? Fonts.fontMedium.font : Fonts.fontRegular.font,
+    fontWeight: Platform.OS === 'ios'? Fonts.fontMedium.fontWeight : Fonts.fontRegular.fontWeight,
   },
 })

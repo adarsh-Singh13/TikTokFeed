@@ -4,12 +4,12 @@ import { useSelector } from 'react-redux';
 import Colors from '../../utility/Colors';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
-import HomeScreen from '../../screens/home/HomeScreen';
-import MyFeedScreen from '../../screens/feed/MyFeedScreen';
-import CreateVideoScreen from '../../screens/createVideo/CreateVideoScreen';
-import SearchScreen from '../../screens/search/SearchScreen';
-import ProfileScreen from '../../screens/profile/ProfileScreen';
-import SettingsScreen from '../../screens/settings/SettingsScreen';
+import HomeScreen from '../../screens/unAuthScreens/Home/HomeScreen';
+import MyFeedScreen from '../../screens/unAuthScreens/feed/MyFeedScreen';
+import CreateVideoScreen from '../../screens/unAuthScreens/createVideo/CreateVideoScreen';
+import SearchScreen from '../../screens/unAuthScreens/search/SearchScreen';
+import ProfileScreen from '../../screens/unAuthScreens/profile/ProfileScreen';
+
 // *
 // Custom Local Imports
 
