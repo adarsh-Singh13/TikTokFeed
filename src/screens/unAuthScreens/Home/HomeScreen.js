@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Button } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { openBottomSheet, toggleDrawer } from '../../redux/commonSlice/commonSlice';
-import HomeScreenBackground from '../../components/backroundScreen/HomeScreenBackground';
-import CustomHeader from '../../components/customHeader/CustomHeader';
+import { openBottomSheet, toggleDrawer } from '../../../redux/commonSlice/commonSlice';
+import HomeScreenBackground from '../../../components/backroundScreen/HomeScreenBackground';
+import CustomHeader from '../../../components/customHeader/CustomHeader';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import ThemeScreen from '../theme/ThemeScreen';
-import NavigationService from '../../utility/NavigationService';
+import NavigationService from '../../../utility/NavigationService';
 
 export default function HomeScreen({navigation}) {
   const dispatch = useDispatch();
@@ -17,6 +17,12 @@ export default function HomeScreen({navigation}) {
       dispatch(toggleDrawer());
       navigation.openDrawer()
     };
+
+      const handleOpenBottomSheet = () => {
+    dispatch(openBottomSheet({
+      component: ThemeScreen,
+    }));
+  }
 
   return (
     <HomeScreenBackground mode={isDarkMode}>
@@ -31,7 +37,9 @@ export default function HomeScreen({navigation}) {
           onSettingsPress={() => NavigationService.navigate('Settings')}
           containerStyle={{ padding: 10, backgroundColor: 'transparent' }}
         />
-        
+         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Button title="Open Bottom Sheet" onPress={handleOpenBottomSheet} />
+        </View>
       </SafeAreaView>
     </HomeScreenBackground>
   );

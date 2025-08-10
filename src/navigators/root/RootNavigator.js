@@ -4,18 +4,27 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import MyDrawer from '../myDrawer/MyDrawer';
 import MyBottomTabs from '../myBottomTab/MyBottomTabs';
 import { navigationRef } from '../../utility/NavigationService';
-import SearchScreen from '../../screens/search/SearchScreen';
-import SettingsScreen from '../../screens/settings/SettingsScreen';
+import SettingsScreen from '../../screens/unAuthScreens/settings/SettingsScreen';
+import { useSelector } from 'react-redux';
+import LoginScreen from '../../screens/authScreen/loginScreen/LoginScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 const Drawer = createDrawerNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function RootNavigator({ onNavigationStateChange }) {
+
+  const userLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
   return (
     <NavigationContainer
       onStateChange={onNavigationStateChange}
       ref={navigationRef}
     >
-      <Drawer.Navigator
+      {
+        userLoggedIn ? (
+          <Drawer.Navigator
         initialRouteName="MainTabs"
         drawerContent={(props) => <MyDrawer {...props} />}
         screenOptions={{
@@ -35,6 +44,14 @@ export default function RootNavigator({ onNavigationStateChange }) {
         <Drawer.Screen name="MainTabs" component={MyBottomTabs} options={{ title: 'Home' }} />
         <Drawer.Screen name="Settings" component={SettingsScreen} options={{ title: 'Home' }} />
       </Drawer.Navigator>
+        ) : (
+          <Stack.Navigator screenOptions={{
+            headerShown: false,
+          }}>
+            <Stack.Screen name="Login" component={LoginScreen}/>
+          </Stack.Navigator>
+        )
+      }
     </NavigationContainer>
   );
 };

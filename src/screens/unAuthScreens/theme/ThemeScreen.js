@@ -11,10 +11,10 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
-import Colors from '../../utility/Colors';
-import Icon from '../../components/customThemeIcon/Icon';
+import Colors from '../../../utility/Colors';
+import Icon from '../../../components/customThemeIcon/Icon';
 import { useDispatch, useSelector } from 'react-redux';
-import { setThemeMode } from '../../redux/commonSlice/commonSlice';
+import { setThemeMode } from '../../../redux/commonSlice/commonSlice';
 
 const ThemeScreen = () => {
   const { width: WIDTH } = useWindowDimensions();

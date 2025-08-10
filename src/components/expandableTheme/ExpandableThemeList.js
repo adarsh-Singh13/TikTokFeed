@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 import Colors from '../../utility/Colors';
 import Animated, {
@@ -9,14 +9,27 @@ import Animated, {
 import GenericIcon from '@react-native-vector-icons/fontawesome';
 import GenericRadioButton from './GenericRadioButton';
 import LinearGradient from 'react-native-linear-gradient';
+import { setThemeMode } from '../../redux/commonSlice/commonSlice';
+import { useDispatch } from 'react-redux';
 
 const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 const Card_Height = SCREEN_HEIGHT * 0.07;
 
 const ExpandableThemeList = ({ mode, system, onPress }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [selected, setSelected] = useState(system || 'system'); // default selection
+  const [selected, setSelected] = useState('');
+  const dispatch = useDispatch();
   console.log(mode, "svss", system);
+
+  useEffect(() => {
+    if (mode && system === 'dark') {
+      setSelected('dark')
+    } else if (!mode && system === 'light') {
+      setSelected('light')
+    } else {
+      setSelected('system')
+    }
+  }, [mode, system])
   
   const data = [
     { key: 'system', text: 'System' },
@@ -46,7 +59,7 @@ const ExpandableThemeList = ({ mode, system, onPress }) => {
   }));
 
   const toggleCard = () => {
-    const toHeight = !isExpanded ? Card_Height + 140 : Card_Height;
+    const toHeight = !isExpanded ? Card_Height + 150 : Card_Height;
     const toTranslateY = !isExpanded ? -Card_Height / 4 : 0;
 
     animatedHeight.value = toHeight;
@@ -59,22 +72,30 @@ const ExpandableThemeList = ({ mode, system, onPress }) => {
     ? [Colors.gray, Colors.lightGray]
     : [Colors.secondary, '#faf9ff',];
 
+  
+  const handleThemeChange = (theme) => {
+    console.log("sybsskb", theme);
+    
+    setSelected(theme);
+    onPress?.(theme); 
+    dispatch(setThemeMode(theme));
+  };
 
   return (
     <TouchableWithoutFeedback onPress={toggleCard}>
       <LinearGradient
         colors={backgroundGradient}
         start={{ x: 0, y: 0 }}
-        end={{ x: 4, y: 0 }}
+        end={{ x: 3, y: 0 }}
         style={styles.gradient}
       >
         <Animated.View style={[styles.card, animatedHeightStyle]}>
           <Animated.View style={[styles.container, headerAnimationStyle]}>
-            <Text style={styles.text}>{'Theme'}</Text>
+            <Text style={[styles.text, {color: mode? Colors.white: Colors.black}]}>{'Theme'}</Text>
             <GenericIcon
               name={isExpanded ? 'caret-up' : 'caret-down'}
               size={24}
-              color={Colors.primaryText}
+              color={mode?Colors.white :Colors.primaryText}
             />
           </Animated.View>
 
@@ -83,13 +104,14 @@ const ExpandableThemeList = ({ mode, system, onPress }) => {
               {data.map((item) => (
                 <View
                   key={item.key}
-                  style={styles.dataConatiner}
+                  style={[styles.dataConatiner, {borderColor: mode ? Colors.white: Colors.black}]}
                 >
-                  <Text style={styles.optionText}>{item.text}</Text>
+                  <Text style={[styles.optionText, { color: mode? Colors.white : Colors.primaryText}]}>{item.text}</Text>
                   <TouchableOpacity>
                     <GenericRadioButton
-                      onPress={onPress}
-                      selected={selected}
+                      selected={selected === item.key}
+                      onPress={() => handleThemeChange(item.key)}
+                      mode={mode}
                     />
                   </TouchableOpacity>
                 </View>
@@ -107,14 +129,12 @@ export default ExpandableThemeList;
 const styles = StyleSheet.create({
   card: {
     width: '98%',
-    // backgroundColor: Colors.gray,
     borderRadius: 12,
     marginTop: 2,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
-    elevation: 3,
     opacity: 1,
     alignSelf: 'center',
     overflow: 'hidden',
@@ -139,7 +159,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingBottom: 2,
     left: 2,
-    top: -14
+    top: -18,
   },
   dataConatiner: {
     width: '100%',
@@ -149,7 +169,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
     paddingTop: 2,
     paddingBottom: 2,
-    borderWidth: 0.3,
+    borderWidth: 0.5,
     borderRadius: 12,
     alignItems: 'center',
   },

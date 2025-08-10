@@ -20,7 +20,8 @@ const CustomHeader = ({
   onFilterPress,
   containerStyle,
   headerStyle,
-  onPersonIconPress
+  onPersonIconPress,
+  mode
 }) => {
   return (
     <View  style={[styles.container, containerStyle]}>
@@ -44,7 +45,7 @@ const CustomHeader = ({
       </TouchableOpacity>
 
       {headerText ? (
-        <Text style={[styles.headerText, headerStyle]}>{headerText}</Text>
+        <Text style={[styles.headerText, headerStyle, {color: mode? Colors.white: Colors.black}]}>{headerText}</Text>
       ) : (
         <View style={{ flex: 1 }} />
       )}

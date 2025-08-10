@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import commonReducer from '../commonSlice/commonSlice'; // ✅ Path fixed with semicolon
+import commonReducer from '../commonSlice/commonSlice';
+import authReducer from '../authSlice/authSlice';
 
 const store = configureStore({
   reducer: {
     common: commonReducer,
+    auth : authReducer,
   },
    middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
