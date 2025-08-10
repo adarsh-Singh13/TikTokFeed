@@ -1,4 +1,4 @@
-import { createNavigationContainerRef } from '@react-navigation/native';
+import { createNavigationContainerRef, DrawerActions } from '@react-navigation/native';
 
 export const navigationRef = createNavigationContainerRef();
 
@@ -11,6 +11,15 @@ const NavigationService = {
   goBack() {
     if (navigationRef.isReady() && navigationRef.canGoBack()) {
       navigationRef.goBack();
+    }
+  },
+  navigateDrawer(action) {
+    if (navigationRef.isReady()) {
+      if (action === 'open') {
+        navigationRef.dispatch(DrawerActions.openDrawer());
+      } else if (action === 'close') {
+        navigationRef.dispatch(DrawerActions.closeDrawer());
+      }
     }
   },
 };

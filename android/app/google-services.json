@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1048684738064",
+    "project_id": "ticktockdemo-fca28",
+    "storage_bucket": "ticktockdemo-fca28.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048684738064:android:36d994fb411a1261a67c95",
+        "android_client_info": {
+          "package_name": "com.tiktokfeed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVF4_mVhQEA-DwZfPYKdJBWdiLCUQwMWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

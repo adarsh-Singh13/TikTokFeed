@@ -4,6 +4,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import MyDrawer from '../myDrawer/MyDrawer';
 import MyBottomTabs from '../myBottomTab/MyBottomTabs';
 import { navigationRef } from '../../utility/NavigationService';
+import SearchScreen from '../../screens/search/SearchScreen';
+import SettingsScreen from '../../screens/settings/SettingsScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -31,6 +33,7 @@ export default function RootNavigator({ onNavigationStateChange }) {
         }}
       >
         <Drawer.Screen name="MainTabs" component={MyBottomTabs} options={{ title: 'Home' }} />
+        <Drawer.Screen name="Settings" component={SettingsScreen} options={{ title: 'Home' }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

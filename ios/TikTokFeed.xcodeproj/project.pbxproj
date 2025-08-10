@@ -7,24 +7,149 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01250CB6D0864C5F8A0EB470 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5355AD4118EC45029D86EAD0 /* Manrope-Regular.ttf */; };
+		0B0E08D30E3E45BE8F55DAD7 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2E41B06CDA44633B5DD2B2B /* Lato-ThinItalic.ttf */; };
+		12DE92C78F194F5D9604CBD0 /* Manrope-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8AD8A1EE66F468B9644B4AD /* Manrope-VariableFont_wght.ttf */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1467CEACE29B402688C2445D /* OpenSans_SemiCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEC70B83D4994371BE34BC0A /* OpenSans_SemiCondensed-Regular.ttf */; };
+		153831072E7E472A8FCE440A /* OpenSans_SemiCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05D5FC1F68E14F809F094306 /* OpenSans_SemiCondensed-BoldItalic.ttf */; };
+		17793CBDBE5D4B28B5F17FDF /* OpenSans_Condensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9BEF463F2124F8CBB4751E7 /* OpenSans_Condensed-SemiBoldItalic.ttf */; };
+		1E71FF71FA55478A864D719C /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16A547FDD70C4E1384424548 /* Lato-BlackItalic.ttf */; };
+		200764EDDDC943D6AE545B0A /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18194A0575DB427981E73A24 /* Lato-Black.ttf */; };
+		235DBAD081524F2BAFE8DCC9 /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75BA04FBB89B4A109774E60A /* OpenSans-MediumItalic.ttf */; };
+		261FAB10C3B74E39B70FE3DC /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D171E241D4284492A4D435CA /* OpenSans-Bold.ttf */; };
+		2A279A7120ED4D9EA336479F /* OpenSans_SemiCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 945AB02ECB794D26ADE749CB /* OpenSans_SemiCondensed-MediumItalic.ttf */; };
+		2BADEAB5B6AA4F69B8EC1140 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24EB0DA211FB490995FFC2B2 /* Manrope-ExtraBold.ttf */; };
+		32DFFB73775F4DAF936F0953 /* OpenSans_SemiCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72FC41BE065B42E894D1312B /* OpenSans_SemiCondensed-LightItalic.ttf */; };
+		42E1FE70DBBD437CB8A1704C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9EAE23C21FB4D0E9F495BAB /* Lato-Bold.ttf */; };
+		44B3CEA69ACF4AD9B25F3F8F /* OpenSans_SemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C3BC63FE4A44E9A81785A7F /* OpenSans_SemiCondensed-Bold.ttf */; };
+		45153BCC0D0C4DDF8DF804D4 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 184FB99F13AE465DA45E707F /* Lato-BoldItalic.ttf */; };
+		46C9264D991043619B3517CB /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E8D93E02740D7806D1627 /* OpenSans-SemiBoldItalic.ttf */; };
+		4AC2695DBB604DDCB491D94B /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC83464E8EE446A8DD1B97D /* Lato-Thin.ttf */; };
+		5357568B9E404FF1851CB732 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5716998A96D440FDB40DC724 /* OpenSans-LightItalic.ttf */; };
+		54FE794585B642F882FF477F /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 490CD68D27584F80A435EF57 /* Manrope-Light.ttf */; };
+		5747D15594EF4BC78A239704 /* README copy.txt in Resources */ = {isa = PBXBuildFile; fileRef = DB1DC6C7BC8043EE8735CAAC /* README copy.txt */; };
+		609148531C004690AF33390E /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39C7149EFCE641B28BCE1556 /* OpenSans-ExtraBold.ttf */; };
+		60E6B009B23D41A5942EB918 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D115D4EAB51D4E52A99345CD /* OpenSans-Regular.ttf */; };
+		6141CD8CE12B44C794443FB5 /* OpenSans_SemiCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C022B351C754DDAB2C819FC /* OpenSans_SemiCondensed-Italic.ttf */; };
+		68FA6CE0F6134F9C958B984A /* OpenSans_Condensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25F1A4B309F44738B27AB74E /* OpenSans_Condensed-ExtraBold.ttf */; };
+		69C06818C97F4D12AAD4C4A7 /* OpenSans_Condensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F588B9D454AE440AA4375D3B /* OpenSans_Condensed-Light.ttf */; };
+		6E94BB5DCB604084B225A449 /* OFL copy.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1216481528D44E795EA71FF /* OFL copy.txt */; };
+		73101F2C3D6E6DB5AD0A7054 /* libPods-TikTokFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C83F18DDD4B89AD69A3AF19 /* libPods-TikTokFeed.a */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		7939300172084BB685C40231 /* OpenSans_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3452F91668954C6090B4E4D7 /* OpenSans_Condensed-Regular.ttf */; };
+		7B6716ED266B42DBA81E51CE /* OpenSans_Condensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C345CD3A0F984B41B966614D /* OpenSans_Condensed-ExtraBoldItalic.ttf */; };
+		815B8516EE574C98BCD74832 /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16182ADCB1E841CB80545185 /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		B0F59C12ACAC974F4DA7EF13 /* libPods-TikTokFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 560AC9F03E9D8E83BB59D366 /* libPods-TikTokFeed.a */; };
+		82044EB34D0D4A668D857DB0 /* OpenSans_SemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE8D535FDAA748CF8D058D71 /* OpenSans_SemiCondensed-SemiBold.ttf */; };
+		887DA695135A46058B630F4A /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 940F42E60A1F46AB8F3F7169 /* Manrope-Bold.ttf */; };
+		8B19B0ED947748FABA76B0A6 /* OpenSans_SemiCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2225A6F1F674449BB95C7C8 /* OpenSans_SemiCondensed-ExtraBold.ttf */; };
+		8E78779FE6E84BF6AB174485 /* OpenSans_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F09684C853DA432E875579DC /* OpenSans_Condensed-Medium.ttf */; };
+		8FDE190A795049E1B6FE7212 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = D740EEEB809E4BF19E9010D7 /* OFL.txt */; };
+		95F1CB97E94C48BCB2F46E0C /* OpenSans_Condensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4BC60DC91B94776964A8081 /* OpenSans_Condensed-BoldItalic.ttf */; };
+		972DF3BC63B445BD97CFCDA0 /* OpenSans_Condensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 352CA894CB584CE4A5EF8B8C /* OpenSans_Condensed-LightItalic.ttf */; };
+		9A67AAD6DC1F457FBE373D18 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 085CE8671FB14D5DB435A34F /* OpenSans-ExtraBoldItalic.ttf */; };
+		9BA6CD69975840B3A40CCAB5 /* OpenSans_SemiCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D49054D4FDC348BF8061316D /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */; };
+		9C2F6AD9C6C541A68F4374EB /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 557CC35CC9314A618806E4B7 /* OpenSans-Medium.ttf */; };
+		9D70BC7CD5924D93A6EEB4B4 /* OpenSans_Condensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6BB686DEA884FF292FFBB91 /* OpenSans_Condensed-SemiBold.ttf */; };
+		9FB0CA05F3444EA9840EE448 /* OpenSans_Condensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C5DF8D3A56049DDA672DBF1 /* OpenSans_Condensed-Italic.ttf */; };
+		9FBCD3FCC6304D00AB4CBAA9 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF0369CD65D44798B751C8AC /* Manrope-ExtraLight.ttf */; };
+		A2FB06C9DF5843E295B53AB8 /* OpenSans_SemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7674AD5973C54FF9978D106B /* OpenSans_SemiCondensed-Medium.ttf */; };
+		AE91646C6B6C4E3AA7980B9D /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8299C525ADD84802A9B66AB2 /* OpenSans-BoldItalic.ttf */; };
+		B3D41B5BB332414D8646377C /* OpenSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41E6F3B95B4340CFA9454B73 /* OpenSans-VariableFont_wdth,wght.ttf */; };
+		C465C456250F4CF18CB7FAFB /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9952E3A7B8E54BC8B90D81FB /* Manrope-SemiBold.ttf */; };
+		C85F85DC6AFD458A8C735FE8 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 074DD89C5ABE47A3BB2DDF06 /* README.txt */; };
+		C8D99DEB31704FDC817D98D5 /* OpenSans_SemiCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B74B871CB2EF448A879DCE94 /* OpenSans_SemiCondensed-Light.ttf */; };
+		CAF22A2D249642E4A2CEF666 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0C6CAA64AA24E3489F53E96 /* OpenSans-SemiBold.ttf */; };
+		D160EAB10C3145FBBA48B8CF /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95970B7C9A6F4246BF01B64F /* Lato-Italic.ttf */; };
+		D2899FAA2E47C4A000883C75 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D2899FA92E47C4A000883C75 /* FirebaseAnalytics */; };
+		D2899FAC2E47C4A000883C75 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D2899FAB2E47C4A000883C75 /* FirebaseDatabase */; };
+		D2899FAE2E47C4A000883C75 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D2899FAD2E47C4A000883C75 /* FirebaseFirestore */; };
+		D2BCE99B2E47C1FB003D270D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2BCE99A2E47C1FB003D270D /* GoogleService-Info.plist */; };
+		DFA952AF7E0146F0B700ED9D /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 107EEAA9CA744FD8BE31D1B6 /* Lato-Light.ttf */; };
+		E15A210A738F463DBBC1EE5F /* OpenSans-Italic-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9C92EE09C004FB6B9CD7EDA /* OpenSans-Italic-VariableFont_wdth,wght.ttf */; };
+		EB62A0BB10884721A09B0F9B /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5ECC6E3B14C7DB7D3231F /* Manrope-Medium.ttf */; };
+		EF58B16FC2FF443A84100A99 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBF0FB443B30425B8F035F46 /* Lato-LightItalic.ttf */; };
+		EF6DBBE35FFD4D1786738958 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60344EDCB04D4DA0B99BBEA8 /* OpenSans-Light.ttf */; };
+		F932DE26B99245449BD37523 /* OpenSans_Condensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E36B809C2904CDBBC1C3F54 /* OpenSans_Condensed-MediumItalic.ttf */; };
+		FE76D056DF2B46CFA615DD05 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4980091A8904F2BB423887C /* Lato-Regular.ttf */; };
+		FED6202BC8C1435DB8B8CAD3 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B56F3A246B0E441894E25FDD /* OpenSans-Italic.ttf */; };
+		FF44CB03DB4641D1B32A46AD /* OpenSans_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E9CF47FEFA64603B24DBEB9 /* OpenSans_Condensed-Bold.ttf */; };
 		FFBD10AE303B656F089EAFAD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05D5FC1F68E14F809F094306 /* OpenSans_SemiCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-BoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		074DD89C5ABE47A3BB2DDF06 /* README.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = README.txt; path = ../src/assets/fonts/README.txt; sourceTree = "<group>"; };
+		085CE8671FB14D5DB435A34F /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		107EEAA9CA744FD8BE31D1B6 /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../src/assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TikTokFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TikTokFeed/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TikTokFeed/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = TikTokFeed/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		54901B14E0B18B48F0206E0B /* Pods-TikTokFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokFeed.debug.xcconfig"; path = "Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed.debug.xcconfig"; sourceTree = "<group>"; };
-		560AC9F03E9D8E83BB59D366 /* libPods-TikTokFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TikTokFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		62210A78482FF766B847B408 /* Pods-TikTokFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokFeed.release.xcconfig"; path = "Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed.release.xcconfig"; sourceTree = "<group>"; };
+		16182ADCB1E841CB80545185 /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		16A547FDD70C4E1384424548 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BlackItalic.ttf"; path = "../src/assets/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		18194A0575DB427981E73A24 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		184FB99F13AE465DA45E707F /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/assets/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		24EB0DA211FB490995FFC2B2 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-ExtraBold.ttf"; path = "../src/assets/fonts/static/Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
+		251E8D93E02740D7806D1627 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-SemiBoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		25F1A4B309F44738B27AB74E /* OpenSans_Condensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-ExtraBold.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3452F91668954C6090B4E4D7 /* OpenSans_Condensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-Regular.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-Regular.ttf"; sourceTree = "<group>"; };
+		352CA894CB584CE4A5EF8B8C /* OpenSans_Condensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-LightItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		39C7149EFCE641B28BCE1556 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-ExtraBold.ttf"; path = "../src/assets/fonts/static copy/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3C5DF8D3A56049DDA672DBF1 /* OpenSans_Condensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-Italic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-Italic.ttf"; sourceTree = "<group>"; };
+		41E6F3B95B4340CFA9454B73 /* OpenSans-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-VariableFont_wdth,wght.ttf"; path = "../src/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
+		490CD68D27584F80A435EF57 /* Manrope-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Light.ttf"; path = "../src/assets/fonts/static/Manrope-Light.ttf"; sourceTree = "<group>"; };
+		5355AD4118EC45029D86EAD0 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Regular.ttf"; path = "../src/assets/fonts/static/Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		557CC35CC9314A618806E4B7 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Medium.ttf"; path = "../src/assets/fonts/static copy/OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		5716998A96D440FDB40DC724 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-LightItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		5C595D77F54E460B0588B029 /* Pods-TikTokFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokFeed.release.xcconfig"; path = "Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed.release.xcconfig"; sourceTree = "<group>"; };
+		60344EDCB04D4DA0B99BBEA8 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Light.ttf"; path = "../src/assets/fonts/static copy/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		6C022B351C754DDAB2C819FC /* OpenSans_SemiCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-Italic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		6C3BC63FE4A44E9A81785A7F /* OpenSans_SemiCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-Bold.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		6DC83464E8EE446A8DD1B97D /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../src/assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		72FC41BE065B42E894D1312B /* OpenSans_SemiCondensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-LightItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		75BA04FBB89B4A109774E60A /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-MediumItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TikTokFeed/AppDelegate.swift; sourceTree = "<group>"; };
+		7674AD5973C54FF9978D106B /* OpenSans_SemiCondensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-Medium.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		7E36B809C2904CDBBC1C3F54 /* OpenSans_Condensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-MediumItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-MediumItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TikTokFeed/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8299C525ADD84802A9B66AB2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-BoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8C83F18DDD4B89AD69A3AF19 /* libPods-TikTokFeed.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TikTokFeed.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A4DCDD5F24E8C83BBB0B7E /* Pods-TikTokFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokFeed.debug.xcconfig"; path = "Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed.debug.xcconfig"; sourceTree = "<group>"; };
+		940F42E60A1F46AB8F3F7169 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Bold.ttf"; path = "../src/assets/fonts/static/Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		945AB02ECB794D26ADE749CB /* OpenSans_SemiCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-MediumItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		95970B7C9A6F4246BF01B64F /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/assets/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		9952E3A7B8E54BC8B90D81FB /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-SemiBold.ttf"; path = "../src/assets/fonts/static/Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		9AC5ECC6E3B14C7DB7D3231F /* Manrope-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-Medium.ttf"; path = "../src/assets/fonts/static/Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		9E9CF47FEFA64603B24DBEB9 /* OpenSans_Condensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-Bold.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-Bold.ttf"; sourceTree = "<group>"; };
+		A2225A6F1F674449BB95C7C8 /* OpenSans_SemiCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-ExtraBold.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A2E41B06CDA44633B5DD2B2B /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-ThinItalic.ttf"; path = "../src/assets/fonts/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		B56F3A246B0E441894E25FDD /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Italic.ttf"; path = "../src/assets/fonts/static copy/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		B74B871CB2EF448A879DCE94 /* OpenSans_SemiCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-Light.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-Light.ttf"; sourceTree = "<group>"; };
+		BF0369CD65D44798B751C8AC /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-ExtraLight.ttf"; path = "../src/assets/fonts/static/Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C345CD3A0F984B41B966614D /* OpenSans_Condensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C6BB686DEA884FF292FFBB91 /* OpenSans_Condensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-SemiBold.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		C9EAE23C21FB4D0E9F495BAB /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		D115D4EAB51D4E52A99345CD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../src/assets/fonts/static copy/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D171E241D4284492A4D435CA /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Bold.ttf"; path = "../src/assets/fonts/static copy/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		D2BCE99A2E47C1FB003D270D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D49054D4FDC348BF8061316D /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-SemiBoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		D740EEEB809E4BF19E9010D7 /* OFL.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = OFL.txt; path = ../src/assets/fonts/OFL.txt; sourceTree = "<group>"; };
+		D9C92EE09C004FB6B9CD7EDA /* OpenSans-Italic-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Italic-VariableFont_wdth,wght.ttf"; path = "../src/assets/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
+		DB1DC6C7BC8043EE8735CAAC /* README copy.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "README copy.txt"; path = "../src/assets/fonts/README copy.txt"; sourceTree = "<group>"; };
+		E4980091A8904F2BB423887C /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		E9BEF463F2124F8CBB4751E7 /* OpenSans_Condensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-SemiBoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		EBF0FB443B30425B8F035F46 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../src/assets/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F09684C853DA432E875579DC /* OpenSans_Condensed-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-Medium.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-Medium.ttf"; sourceTree = "<group>"; };
+		F0C6CAA64AA24E3489F53E96 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-SemiBold.ttf"; path = "../src/assets/fonts/static copy/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		F1216481528D44E795EA71FF /* OFL copy.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OFL copy.txt"; path = "../src/assets/fonts/OFL copy.txt"; sourceTree = "<group>"; };
+		F4BC60DC91B94776964A8081 /* OpenSans_Condensed-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-BoldItalic.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F588B9D454AE440AA4375D3B /* OpenSans_Condensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_Condensed-Light.ttf"; path = "../src/assets/fonts/static copy/OpenSans_Condensed-Light.ttf"; sourceTree = "<group>"; };
+		F8AD8A1EE66F468B9644B4AD /* Manrope-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-VariableFont_wght.ttf"; path = "../src/assets/fonts/Manrope-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		FE8D535FDAA748CF8D058D71 /* OpenSans_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-SemiBold.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		FEC70B83D4994371BE34BC0A /* OpenSans_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans_SemiCondensed-Regular.ttf"; path = "../src/assets/fonts/static copy/OpenSans_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +157,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0F59C12ACAC974F4DA7EF13 /* libPods-TikTokFeed.a in Frameworks */,
+				D2899FAC2E47C4A000883C75 /* FirebaseDatabase in Frameworks */,
+				D2899FAE2E47C4A000883C75 /* FirebaseFirestore in Frameworks */,
+				D2899FAA2E47C4A000883C75 /* FirebaseAnalytics in Frameworks */,
+				73101F2C3D6E6DB5AD0A7054 /* libPods-TikTokFeed.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +170,7 @@
 		13B07FAE1A68108700A75B9A /* TikTokFeed */ = {
 			isa = PBXGroup;
 			children = (
+				D2BCE99A2E47C1FB003D270D /* GoogleService-Info.plist */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -55,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				560AC9F03E9D8E83BB59D366 /* libPods-TikTokFeed.a */,
+				8C83F18DDD4B89AD69A3AF19 /* libPods-TikTokFeed.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,6 +204,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				BB0AC2820BEB4F10A882A07E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -89,11 +219,78 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BB0AC2820BEB4F10A882A07E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18194A0575DB427981E73A24 /* Lato-Black.ttf */,
+				16A547FDD70C4E1384424548 /* Lato-BlackItalic.ttf */,
+				C9EAE23C21FB4D0E9F495BAB /* Lato-Bold.ttf */,
+				184FB99F13AE465DA45E707F /* Lato-BoldItalic.ttf */,
+				95970B7C9A6F4246BF01B64F /* Lato-Italic.ttf */,
+				107EEAA9CA744FD8BE31D1B6 /* Lato-Light.ttf */,
+				EBF0FB443B30425B8F035F46 /* Lato-LightItalic.ttf */,
+				E4980091A8904F2BB423887C /* Lato-Regular.ttf */,
+				6DC83464E8EE446A8DD1B97D /* Lato-Thin.ttf */,
+				A2E41B06CDA44633B5DD2B2B /* Lato-ThinItalic.ttf */,
+				F8AD8A1EE66F468B9644B4AD /* Manrope-VariableFont_wght.ttf */,
+				D9C92EE09C004FB6B9CD7EDA /* OpenSans-Italic-VariableFont_wdth,wght.ttf */,
+				41E6F3B95B4340CFA9454B73 /* OpenSans-VariableFont_wdth,wght.ttf */,
+				940F42E60A1F46AB8F3F7169 /* Manrope-Bold.ttf */,
+				24EB0DA211FB490995FFC2B2 /* Manrope-ExtraBold.ttf */,
+				BF0369CD65D44798B751C8AC /* Manrope-ExtraLight.ttf */,
+				490CD68D27584F80A435EF57 /* Manrope-Light.ttf */,
+				9AC5ECC6E3B14C7DB7D3231F /* Manrope-Medium.ttf */,
+				5355AD4118EC45029D86EAD0 /* Manrope-Regular.ttf */,
+				9952E3A7B8E54BC8B90D81FB /* Manrope-SemiBold.ttf */,
+				D171E241D4284492A4D435CA /* OpenSans-Bold.ttf */,
+				8299C525ADD84802A9B66AB2 /* OpenSans-BoldItalic.ttf */,
+				39C7149EFCE641B28BCE1556 /* OpenSans-ExtraBold.ttf */,
+				085CE8671FB14D5DB435A34F /* OpenSans-ExtraBoldItalic.ttf */,
+				B56F3A246B0E441894E25FDD /* OpenSans-Italic.ttf */,
+				60344EDCB04D4DA0B99BBEA8 /* OpenSans-Light.ttf */,
+				5716998A96D440FDB40DC724 /* OpenSans-LightItalic.ttf */,
+				557CC35CC9314A618806E4B7 /* OpenSans-Medium.ttf */,
+				75BA04FBB89B4A109774E60A /* OpenSans-MediumItalic.ttf */,
+				D115D4EAB51D4E52A99345CD /* OpenSans-Regular.ttf */,
+				F0C6CAA64AA24E3489F53E96 /* OpenSans-SemiBold.ttf */,
+				251E8D93E02740D7806D1627 /* OpenSans-SemiBoldItalic.ttf */,
+				9E9CF47FEFA64603B24DBEB9 /* OpenSans_Condensed-Bold.ttf */,
+				F4BC60DC91B94776964A8081 /* OpenSans_Condensed-BoldItalic.ttf */,
+				25F1A4B309F44738B27AB74E /* OpenSans_Condensed-ExtraBold.ttf */,
+				C345CD3A0F984B41B966614D /* OpenSans_Condensed-ExtraBoldItalic.ttf */,
+				3C5DF8D3A56049DDA672DBF1 /* OpenSans_Condensed-Italic.ttf */,
+				F588B9D454AE440AA4375D3B /* OpenSans_Condensed-Light.ttf */,
+				352CA894CB584CE4A5EF8B8C /* OpenSans_Condensed-LightItalic.ttf */,
+				F09684C853DA432E875579DC /* OpenSans_Condensed-Medium.ttf */,
+				7E36B809C2904CDBBC1C3F54 /* OpenSans_Condensed-MediumItalic.ttf */,
+				3452F91668954C6090B4E4D7 /* OpenSans_Condensed-Regular.ttf */,
+				C6BB686DEA884FF292FFBB91 /* OpenSans_Condensed-SemiBold.ttf */,
+				E9BEF463F2124F8CBB4751E7 /* OpenSans_Condensed-SemiBoldItalic.ttf */,
+				6C3BC63FE4A44E9A81785A7F /* OpenSans_SemiCondensed-Bold.ttf */,
+				05D5FC1F68E14F809F094306 /* OpenSans_SemiCondensed-BoldItalic.ttf */,
+				A2225A6F1F674449BB95C7C8 /* OpenSans_SemiCondensed-ExtraBold.ttf */,
+				16182ADCB1E841CB80545185 /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf */,
+				6C022B351C754DDAB2C819FC /* OpenSans_SemiCondensed-Italic.ttf */,
+				B74B871CB2EF448A879DCE94 /* OpenSans_SemiCondensed-Light.ttf */,
+				72FC41BE065B42E894D1312B /* OpenSans_SemiCondensed-LightItalic.ttf */,
+				7674AD5973C54FF9978D106B /* OpenSans_SemiCondensed-Medium.ttf */,
+				945AB02ECB794D26ADE749CB /* OpenSans_SemiCondensed-MediumItalic.ttf */,
+				FEC70B83D4994371BE34BC0A /* OpenSans_SemiCondensed-Regular.ttf */,
+				FE8D535FDAA748CF8D058D71 /* OpenSans_SemiCondensed-SemiBold.ttf */,
+				D49054D4FDC348BF8061316D /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */,
+				F1216481528D44E795EA71FF /* OFL copy.txt */,
+				D740EEEB809E4BF19E9010D7 /* OFL.txt */,
+				DB1DC6C7BC8043EE8735CAAC /* README copy.txt */,
+				074DD89C5ABE47A3BB2DDF06 /* README.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				54901B14E0B18B48F0206E0B /* Pods-TikTokFeed.debug.xcconfig */,
-				62210A78482FF766B847B408 /* Pods-TikTokFeed.release.xcconfig */,
+				92A4DCDD5F24E8C83BBB0B7E /* Pods-TikTokFeed.debug.xcconfig */,
+				5C595D77F54E460B0588B029 /* Pods-TikTokFeed.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -105,13 +302,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TikTokFeed" */;
 			buildPhases = (
-				4E6166D33B8EE0804A62F4EA /* [CP] Check Pods Manifest.lock */,
+				947D5E1F6A82D724F895D77D /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				52E66E02C3E9629E4EA49566 /* [CP] Embed Pods Frameworks */,
-				829327710123B36F399A8FE9 /* [CP] Copy Pods Resources */,
+				F39274E1F4D506B0796D43D0 /* [CP] Embed Pods Frameworks */,
+				B88C163C14442B671093F8D5 /* [CP] Copy Pods Resources */,
+				C9B696C474358DCF1D2745E9 /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -144,6 +342,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				D2899FA82E47C4A000883C75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,6 +362,67 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				FFBD10AE303B656F089EAFAD /* PrivacyInfo.xcprivacy in Resources */,
+				200764EDDDC943D6AE545B0A /* Lato-Black.ttf in Resources */,
+				1E71FF71FA55478A864D719C /* Lato-BlackItalic.ttf in Resources */,
+				42E1FE70DBBD437CB8A1704C /* Lato-Bold.ttf in Resources */,
+				45153BCC0D0C4DDF8DF804D4 /* Lato-BoldItalic.ttf in Resources */,
+				D160EAB10C3145FBBA48B8CF /* Lato-Italic.ttf in Resources */,
+				DFA952AF7E0146F0B700ED9D /* Lato-Light.ttf in Resources */,
+				EF58B16FC2FF443A84100A99 /* Lato-LightItalic.ttf in Resources */,
+				FE76D056DF2B46CFA615DD05 /* Lato-Regular.ttf in Resources */,
+				4AC2695DBB604DDCB491D94B /* Lato-Thin.ttf in Resources */,
+				0B0E08D30E3E45BE8F55DAD7 /* Lato-ThinItalic.ttf in Resources */,
+				12DE92C78F194F5D9604CBD0 /* Manrope-VariableFont_wght.ttf in Resources */,
+				E15A210A738F463DBBC1EE5F /* OpenSans-Italic-VariableFont_wdth,wght.ttf in Resources */,
+				B3D41B5BB332414D8646377C /* OpenSans-VariableFont_wdth,wght.ttf in Resources */,
+				887DA695135A46058B630F4A /* Manrope-Bold.ttf in Resources */,
+				2BADEAB5B6AA4F69B8EC1140 /* Manrope-ExtraBold.ttf in Resources */,
+				9FBCD3FCC6304D00AB4CBAA9 /* Manrope-ExtraLight.ttf in Resources */,
+				54FE794585B642F882FF477F /* Manrope-Light.ttf in Resources */,
+				EB62A0BB10884721A09B0F9B /* Manrope-Medium.ttf in Resources */,
+				01250CB6D0864C5F8A0EB470 /* Manrope-Regular.ttf in Resources */,
+				C465C456250F4CF18CB7FAFB /* Manrope-SemiBold.ttf in Resources */,
+				261FAB10C3B74E39B70FE3DC /* OpenSans-Bold.ttf in Resources */,
+				AE91646C6B6C4E3AA7980B9D /* OpenSans-BoldItalic.ttf in Resources */,
+				D2BCE99B2E47C1FB003D270D /* GoogleService-Info.plist in Resources */,
+				609148531C004690AF33390E /* OpenSans-ExtraBold.ttf in Resources */,
+				9A67AAD6DC1F457FBE373D18 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				FED6202BC8C1435DB8B8CAD3 /* OpenSans-Italic.ttf in Resources */,
+				EF6DBBE35FFD4D1786738958 /* OpenSans-Light.ttf in Resources */,
+				5357568B9E404FF1851CB732 /* OpenSans-LightItalic.ttf in Resources */,
+				9C2F6AD9C6C541A68F4374EB /* OpenSans-Medium.ttf in Resources */,
+				235DBAD081524F2BAFE8DCC9 /* OpenSans-MediumItalic.ttf in Resources */,
+				60E6B009B23D41A5942EB918 /* OpenSans-Regular.ttf in Resources */,
+				CAF22A2D249642E4A2CEF666 /* OpenSans-SemiBold.ttf in Resources */,
+				46C9264D991043619B3517CB /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				FF44CB03DB4641D1B32A46AD /* OpenSans_Condensed-Bold.ttf in Resources */,
+				95F1CB97E94C48BCB2F46E0C /* OpenSans_Condensed-BoldItalic.ttf in Resources */,
+				68FA6CE0F6134F9C958B984A /* OpenSans_Condensed-ExtraBold.ttf in Resources */,
+				7B6716ED266B42DBA81E51CE /* OpenSans_Condensed-ExtraBoldItalic.ttf in Resources */,
+				9FB0CA05F3444EA9840EE448 /* OpenSans_Condensed-Italic.ttf in Resources */,
+				69C06818C97F4D12AAD4C4A7 /* OpenSans_Condensed-Light.ttf in Resources */,
+				972DF3BC63B445BD97CFCDA0 /* OpenSans_Condensed-LightItalic.ttf in Resources */,
+				8E78779FE6E84BF6AB174485 /* OpenSans_Condensed-Medium.ttf in Resources */,
+				F932DE26B99245449BD37523 /* OpenSans_Condensed-MediumItalic.ttf in Resources */,
+				7939300172084BB685C40231 /* OpenSans_Condensed-Regular.ttf in Resources */,
+				9D70BC7CD5924D93A6EEB4B4 /* OpenSans_Condensed-SemiBold.ttf in Resources */,
+				17793CBDBE5D4B28B5F17FDF /* OpenSans_Condensed-SemiBoldItalic.ttf in Resources */,
+				44B3CEA69ACF4AD9B25F3F8F /* OpenSans_SemiCondensed-Bold.ttf in Resources */,
+				153831072E7E472A8FCE440A /* OpenSans_SemiCondensed-BoldItalic.ttf in Resources */,
+				8B19B0ED947748FABA76B0A6 /* OpenSans_SemiCondensed-ExtraBold.ttf in Resources */,
+				815B8516EE574C98BCD74832 /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf in Resources */,
+				6141CD8CE12B44C794443FB5 /* OpenSans_SemiCondensed-Italic.ttf in Resources */,
+				C8D99DEB31704FDC817D98D5 /* OpenSans_SemiCondensed-Light.ttf in Resources */,
+				32DFFB73775F4DAF936F0953 /* OpenSans_SemiCondensed-LightItalic.ttf in Resources */,
+				A2FB06C9DF5843E295B53AB8 /* OpenSans_SemiCondensed-Medium.ttf in Resources */,
+				2A279A7120ED4D9EA336479F /* OpenSans_SemiCondensed-MediumItalic.ttf in Resources */,
+				1467CEACE29B402688C2445D /* OpenSans_SemiCondensed-Regular.ttf in Resources */,
+				82044EB34D0D4A668D857DB0 /* OpenSans_SemiCondensed-SemiBold.ttf in Resources */,
+				9BA6CD69975840B3A40CCAB5 /* OpenSans_SemiCondensed-SemiBoldItalic.ttf in Resources */,
+				6E94BB5DCB604084B225A449 /* OFL copy.txt in Resources */,
+				8FDE190A795049E1B6FE7212 /* OFL.txt in Resources */,
+				5747D15594EF4BC78A239704 /* README copy.txt in Resources */,
+				C85F85DC6AFD458A8C735FE8 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +445,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		4E6166D33B8EE0804A62F4EA /* [CP] Check Pods Manifest.lock */ = {
+		947D5E1F6A82D724F895D77D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,24 +467,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		52E66E02C3E9629E4EA49566 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		829327710123B36F399A8FE9 /* [CP] Copy Pods Resources */ = {
+		B88C163C14442B671093F8D5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -237,6 +482,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9B696C474358DCF1D2745E9 /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\n\n##########################################################################\n##########################################################################\n#\n#  NOTE THAT IF YOU CHANGE THIS FILE YOU MUST RUN pod install AFTERWARDS\n#\n#  This file is installed as an Xcode build script in the project file\n#  by cocoapods, and you will not see your changes until you pod install\n#\n##########################################################################\n##########################################################################\n\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -Ku -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | /usr/bin/head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -Ku -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    if ! python3 --version >/dev/null 2>&1; then echo \"python3 not found, firebase.json file processing error.\" && exit 1; fi\n    _JSON_OUTPUT_BASE64=$(python3 -c 'import json,sys,base64;print(base64.b64encode(bytes(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"', '\"'rb'\"').read())['${_JSON_ROOT}']), '\"'utf-8'\"')).decode())' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.app_data_collection_default_enabled\n  _APP_DATA_COLLECTION_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_data_collection_default_enabled\")\n  if [[ $_APP_DATA_COLLECTION_ENABLED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseDataCollectionDefaultEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_DATA_COLLECTION_ENABLED\")\")\n  fi\n\n  # config.analytics_auto_collection_enabled\n  _ANALYTICS_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_auto_collection_enabled\")\n  if [[ $_ANALYTICS_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_COLLECTION\")\")\n  fi\n\n  # config.analytics_collection_deactivated\n  _ANALYTICS_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_collection_deactivated\")\n  if [[ $_ANALYTICS_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_DEACTIVATED\")\")\n  fi\n\n  # config.analytics_idfv_collection_enabled\n  _ANALYTICS_IDFV_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_idfv_collection_enabled\")\n  if [[ $_ANALYTICS_IDFV_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_IDFV_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_IDFV_COLLECTION\")\")\n  fi\n\n  # config.analytics_default_allow_analytics_storage\n  _ANALYTICS_STORAGE=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_analytics_storage\")\n  if [[ $_ANALYTICS_STORAGE ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_ANALYTICS_STORAGE\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_STORAGE\")\")\n  fi\n\n  # config.analytics_default_allow_ad_storage\n  _ANALYTICS_AD_STORAGE=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_storage\")\n  if [[ $_ANALYTICS_AD_STORAGE ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_STORAGE\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AD_STORAGE\")\")\n  fi\n\n  # config.analytics_default_allow_ad_user_data\n  _ANALYTICS_AD_USER_DATA=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_user_data\")\n  if [[ $_ANALYTICS_AD_USER_DATA ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_USER_DATA\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AD_USER_DATA\")\")\n  fi\n\n  # config.analytics_default_allow_ad_personalization_signals\n  _ANALYTICS_PERSONALIZATION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_personalization_signals\")\n  if [[ $_ANALYTICS_PERSONALIZATION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_PERSONALIZATION_SIGNALS\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_PERSONALIZATION\")\")\n  fi\n\n  # config.analytics_registration_with_ad_network_enabled\n  _ANALYTICS_REGISTRATION_WITH_AD_NETWORK=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_registration_with_ad_network_enabled\")\n  if [[ $_ANALYTICS_REGISTRATION_WITH_AD_NETWORK ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_REGISTRATION_WITH_AD_NETWORK_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_REGISTRATION_WITH_AD_NETWORK\")\")\n  fi\n\n  # config.google_analytics_automatic_screen_reporting_enabled\n  _ANALYTICS_AUTO_SCREEN_REPORTING=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_automatic_screen_reporting_enabled\")\n  if [[ $_ANALYTICS_AUTO_SCREEN_REPORTING ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAutomaticScreenReportingEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_SCREEN_REPORTING\")\")\n  fi\n\n  # config.perf_auto_collection_enabled\n  _PERF_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_auto_collection_enabled\")\n  if [[ $_PERF_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_enabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_AUTO_COLLECTION\")\")\n  fi\n\n  # config.perf_collection_deactivated\n  _PERF_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_collection_deactivated\")\n  if [[ $_PERF_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_deactivated\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_DEACTIVATED\")\")\n  fi\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.in_app_messaging_auto_colllection_enabled\n  _FIAM_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"in_app_messaging_auto_collection_enabled\")\n  if [[ $_FIAM_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseInAppMessagingAutomaticDataCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_FIAM_AUTO_INIT\")\")\n  fi\n\n  # config.app_check_token_auto_refresh\n  _APP_CHECK_TOKEN_AUTO_REFRESH=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_check_token_auto_refresh\")\n  if [[ $_APP_CHECK_TOKEN_AUTO_REFRESH ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAppCheckTokenAutoRefreshEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_CHECK_TOKEN_AUTO_REFRESH\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes useful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"FirebaseCrashlyticsCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f \"${plist}\" ]]; then\n\n    # paths with spaces break the call to setPlistValue. temporarily modify\n    # the shell internal field separator variable (IFS), which normally\n    # includes spaces, to consist only of line breaks\n    oldifs=$IFS\n    IFS=\"\n\"\n\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n\n    # restore the original internal field separator value\n    IFS=$oldifs\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n";
+		};
+		F39274E1F4D506B0796D43D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTokFeed/Pods-TikTokFeed-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -255,11 +530,12 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54901B14E0B18B48F0206E0B /* Pods-TikTokFeed.debug.xcconfig */;
+			baseConfigurationReference = 92A4DCDD5F24E8C83BBB0B7E /* Pods-TikTokFeed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TikTokFeed/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -273,7 +549,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiktokfeed;
 				PRODUCT_NAME = TikTokFeed;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -283,7 +559,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62210A78482FF766B847B408 /* Pods-TikTokFeed.release.xcconfig */;
+			baseConfigurationReference = 5C595D77F54E460B0588B029 /* Pods-TikTokFeed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -300,7 +576,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiktokfee;
 				PRODUCT_NAME = TikTokFeed;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -481,6 +757,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2899FA82E47C4A000883C75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2899FA92E47C4A000883C75 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2899FA82E47C4A000883C75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D2899FAB2E47C4A000883C75 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2899FA82E47C4A000883C75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D2899FAD2E47C4A000883C75 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2899FA82E47C4A000883C75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
