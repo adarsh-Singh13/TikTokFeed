@@ -10,6 +10,7 @@ import firestore from '@react-native-firebase/firestore';
 import GooglSignInConfig from '../../../config/GooglSignInConfig';
 import { loggedIn, loggedOut } from '../../../redux/authSlice/authSlice';
 import { ActivityIndicator } from 'react-native-paper';
+import CustomToastMessage from '../../../components/customToast/CustomToastMessage';
 
 export default function LoginScreen({navigation}) {
     const insets = useSafeAreaInsets();
@@ -48,8 +49,7 @@ export default function LoginScreen({navigation}) {
                     //     coin: '0',
                     // });
                     console.log('User created successfully!', navigation);
-                    Alert.alert('Success', `Welcome ${userInfo?.user?.displayName}!`);
-                    navigation.navigate('Home')
+                    // navigation.navigate('Home')
                     dispatch(loggedIn());
                     console.log('SIGN_IN_SUCCESS');
 
