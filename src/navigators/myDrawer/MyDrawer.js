@@ -1,12 +1,15 @@
 import React from 'react';
-import { Text, View, StyleSheet, Appearance } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { DrawerItem, DrawerContentScrollView } from '@react-navigation/drawer';
 import { useDispatch, useSelector } from 'react-redux';
+import auth from '@react-native-firebase/auth';
 import Colors from '../../utility/Colors';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 import { setThemeMode } from '../../redux/commonSlice/commonSlice';
 import CustomSwitchButton from '../../components/CustomSwitchBtn/CustomSwitchButton';
+import GenericIcon from '../../components/genericIcon/GenericIcon';
+
 
 export default function MyDrawer(props) {
   const { state, navigation } = props;
@@ -21,6 +24,17 @@ export default function MyDrawer(props) {
     } else {
       // system → light
       dispatch(setThemeMode('light'));
+    }
+  };
+
+
+  const handleLogout = async () => {
+    console.log('Logout Pressed:');
+    try {
+      await auth().signOut();
+      // No need to manually dispatch loggedOut() because App.js listener will handle it
+    } catch (error) {
+      console.log('Logout error:', error);
     }
   };
 
@@ -41,49 +55,62 @@ export default function MyDrawer(props) {
     state.routes[state.index]?.state?.routes?.[state.routes[state.index]?.state.index || 0]?.name;
 
   return (
-    <DrawerContentScrollView style={{ backgroundColor }}>
-      <View style={styles.drawerItemHeader}>
-        <FontAwesome name="user-circle" size={50} color={textColor} />
-        <View style={styles.headerTextContainer}>
-          <Text style={[styles.name, { color: textColor }]}>Adarsh Singh</Text>
-          <Text style={[styles.email, { color: textColor }]}>adarshsingh@gmail.com</Text>
+    <View style={[{flex: 1},{ backgroundColor}]}>
+      <DrawerContentScrollView style={{ backgroundColor }}>
+        <View style={styles.drawerItemHeader}>
+          <FontAwesome name="user-circle" size={50} color={textColor} />
+          <View style={styles.headerTextContainer}>
+            <Text style={[styles.name, { color: textColor }]}>Adarsh Singh</Text>
+            <Text style={[styles.email, { color: textColor }]}>adarshsingh@gmail.com</Text>
+          </View>
         </View>
-      </View>
 
-      {drawerItems.map(item => {
-        const isActive = currentTabRoute === item.route;
+        {drawerItems.map(item => {
+          const isActive = currentTabRoute === item.route;
 
-        return (
-          <DrawerItem
-            key={item.route}
-            label={item.label}
-            labelStyle={{ color: textColor }}
-            icon={() =>
-              item.iconName === 'home' || item.iconName === 'search' ? (
-                <FontAwesome name={item.iconName} size={20} color={textColor} />
-              ) : (
-                <FontAwesome6 name={item.iconName} iconStyle="solid" size={20} color={textColor} />
-              )
-            }
-            style={[
-              styles.drawerItemContainer,
-              isActive ? { backgroundColor: activeBgColor } : null,
-            ]}
-            onPress={() => navigation.navigate('MainTabs', { screen: item.route })}
-            focused={isActive}
+          return (
+            <DrawerItem
+              key={item.route}
+              label={item.label}
+              labelStyle={{ color: textColor }}
+              icon={() =>
+                item.iconName === 'home' || item.iconName === 'search' ? (
+                  <FontAwesome name={item.iconName} size={20} color={textColor} />
+                ) : (
+                  <FontAwesome6 name={item.iconName} iconStyle="solid" size={20} color={textColor} />
+                )
+              }
+              style={[
+                styles.drawerItemContainer,
+                isActive ? { backgroundColor: activeBgColor } : null,
+              ]}
+              onPress={() => navigation.navigate('MainTabs', { screen: item.route })}
+              focused={isActive}
+            />
+          );
+        })}
+
+        <View style={styles.switchContainer}>
+          <View style={{ flex: 1, top: 4 }}>
+            <Text style={{ color: textColor }}>Dark Mode</Text>
+          </View>
+          <View style={styles.switchBtn}>
+            <CustomSwitchButton value={isDarkMode} onPress={toggleTheme} />
+          </View>
+        </View>
+      </DrawerContentScrollView>
+       <View style={styles.logoutContainer}>
+         <Text style={[styles.logoutText, { color: isDarkMode ? Colors.primary: Colors.black}]}>Logout</Text>
+          <GenericIcon
+            name={'logout-variant'}
+            type='mdi'
+            size={24}
+            color={isDarkMode ? Colors.primary: Colors.black}
+            onPressIcon={() => handleLogout()}
+            style={styles.logoutBtn}
           />
-        );
-      })}
-
-      <View style={styles.switchContainer}>
-        <View style={{ flex: 1, top: 4 }}>
-          <Text style={{ color: textColor }}>Dark Mode</Text>
-        </View>
-        <View style={styles.switchBtn}>
-          <CustomSwitchButton value={isDarkMode} onPress={toggleTheme} />
-        </View>
       </View>
-    </DrawerContentScrollView>
+    </View>
   );
 }
 
@@ -118,5 +145,26 @@ const styles = StyleSheet.create({
   },
   email: {
     fontSize: 10,
+  },
+  logoutContainer: {
+    flexDirection: 'row',
+    position: 'absolute',
+    left: 11,
+    padding: 20,
+    borderTopWidth: 0,
+    borderTopColor: '#ccc',
+    bottom: 100,
+  },
+  logoutButton: {
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  logoutText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  logoutBtn: {
+    left: 94
   },
 });
