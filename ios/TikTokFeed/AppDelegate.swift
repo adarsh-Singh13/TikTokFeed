@@ -2,7 +2,7 @@ import UIKit
 import React
 import React_RCTAppDelegate
 import ReactAppDependencyProvider
-import FirebaseCore
+import FirebaseCore   // Import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,11 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
 
     factory.startReactNative(
-      withModuleName: "TikTokFeed",
+      withModuleName: "TikTokFeed",   // Your RN module
       in: window,
       launchOptions: launchOptions
     )
+
+    // Initialize Firebase once app starts
     FirebaseApp.configure()
+
     return true
   }
 }
