@@ -1,3 +1,23 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#57b3fb",
+        "activityBar.background": "#57b3fb",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#da057d",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#57b3fb",
+        "statusBar.background": "#259dfa",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#0584e7",
+        "statusBarItem.remoteBackground": "#259dfa",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#259dfa",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#259dfa99",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#259DFA"
 }
