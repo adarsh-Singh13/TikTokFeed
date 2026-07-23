@@ -9,7 +9,7 @@ import { useSystemThemeSync } from './src/redux/systemUtilityHook/syncSystemThem
 import { syncSystemTheme } from './src/redux/commonSlice/commonSlice';
 import { darkTheme, lightTheme } from './src/utility/theme';
 import auth from '@react-native-firebase/auth';
-import { loggedIn, loggedOut } from './src/redux/authSlice/authSlice';
+import { loginLoading, loginSuccess, loginFailure } from './src/redux/authSlice/authSlice';
 
 function MainApp() {
   useSystemThemeSync();
@@ -17,7 +17,7 @@ function MainApp() {
   const dispatch = useDispatch();
   const isDark = useSelector((state) => state.common.isDark);
   const theme = isDark ? darkTheme : lightTheme;
-  const themeMode = useSelector(state => state.common.themeMode);
+  const themeMode = useSelector((state) => state.common.themeMode);
 
   // Sync system theme on mount
   useEffect(() => {
@@ -34,11 +34,22 @@ function MainApp() {
 
   // For the Firebase Auth state changes (Persistent Login)
   useEffect(() => {
-    const unsubscribe = auth().onAuthStateChanged(user => {
+    const unsubscribe = auth().onAuthStateChanged(async (user) => {
       if (user) {
-        dispatch(loggedIn());
+        try {
+          dispatch(loginLoading());
+          const userData = {
+            uid: user.uid,
+            name: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+          };
+          dispatch(loginSuccess(userData));
+        } catch (err) {
+          dispatch(loginFailure(err.message || 'Failed to restore session'));
+        }
       } else {
-        dispatch(loggedOut());
+        dispatch(loginFailure('No user logged in'));
       }
     });
     return unsubscribe;
