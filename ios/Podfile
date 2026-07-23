@@ -1,9 +1,13 @@
-require File.join(File.dirname(`node --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
+require File.join(
+  File.dirname(`node --print "require.resolve('react-native/package.json')"`),
+  "scripts/react_native_pods"
+)
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
 use_frameworks! :linkage => :static
+
 target 'TikTokFeed' do
   config = use_native_modules!
 
@@ -12,6 +16,10 @@ target 'TikTokFeed' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Source - https://stackoverflow.com/a/79921410
+  # Posted by Waseem Kurne
+  # Retrieved 2026-07-23, License - CC BY-SA 4.0
+
   post_install do |installer|
     react_native_post_install(
       installer,
@@ -19,10 +27,17 @@ target 'TikTokFeed' do
       :mac_catalyst_enabled => false
     )
 
-    # Allow non-modular includes in framework modules to avoid build errors in some pods (e.g., gRPC/BoringSSL)
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
+        # Allow non-modular includes in framework modules
         config.build_settings['CLANG_ALLOW_NON_MODULAR_IN_FRAMEWORK_MODULES'] = 'YES'
+      end
+
+      # Fix for Xcode 26.4 build error
+      if target.name == 'fmt'
+        target.build_configurations.each do |config|
+          config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
+        end
       end
     end
   end

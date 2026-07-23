@@ -2,21 +2,22 @@ import React, { useEffect, useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import { BlurView } from '@react-native-community/blur';
 import { useDispatch, useSelector } from 'react-redux';
 import Colors from '../../../utility/Colors';
 import auth from '@react-native-firebase/auth';
-import firestore from '@react-native-firebase/firestore';
 import GooglSignInConfig from '../../../config/GooglSignInConfig';
-import { loggedIn, loggedOut } from '../../../redux/authSlice/authSlice';
+import { loggedOut, loginLoading, loginSuccess } from '../../../redux/authSlice/authSlice';
 import { ActivityIndicator } from 'react-native-paper';
+import { styles } from './LoginStyles';
 import CustomToastMessage from '../../../components/customToast/CustomToastMessage';
 
-export default function LoginScreen({navigation}) {
+export default function LoginScreen({ navigation }) {
     const insets = useSafeAreaInsets();
     const dispatch = useDispatch();
     const isDarkMode = useSelector((state) => state.common.isDark);
     const [isSigningIn, setIsSigningIn] = useState(false);
+    const [toastVisible, setToastVisible] = useState(false);
+    const [toastMessage, setToastMessage] = useState('');
 
     useEffect(() => {
         GoogleSignin.configure({
@@ -25,63 +26,45 @@ export default function LoginScreen({navigation}) {
     }, []);
 
     const signInWithGoogle = async () => {
+        dispatch(loginLoading());
         setIsSigningIn(true);
+
         try {
             await GoogleSignin.hasPlayServices();
             const response = await GoogleSignin.signIn();
-            const idToken = response?.data?.idToken;
-            console.log("My Token SignIn", response);
+            console.log("Google SignIn Response:", response);
+
+            const LogInIdData = response?.data;
+            const idToken = LogInIdData?.idToken;
             if (!idToken) {
-                console.log('Sign-in was cancelled or no idToken returned');
-                return;
-            };
+                throw new Error("No idToken returned");
+            }
 
-            if (response && idToken) {
-                const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-                const userInfo = await auth().signInWithCredential(googleCredential);
-                // console.log("In My SignIn Google", );
-                if (userInfo) {
-                    // const userRef = firestore().collection('Users').doc(auth().currentUser.uid);
-                    // await userRef.set({
-                    //     name: userInfo.user.displayName,
-                    //     email: userInfo.user.email,
-                    //     photoURL: userInfo.user.photoURL,
-                    //     coin: '0',
-                    // });
-                    console.log('User created successfully!', navigation);
-                    // navigation.navigate('Home')
-                    dispatch(loggedIn());
-                    console.log('SIGN_IN_SUCCESS');
+            const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+            const userInfo = await auth().signInWithCredential(googleCredential);
+            console.log(userInfo.user._user, "SIGN_IN_SUCCESS_True");
+             setToastMessage('Google Sign-In Successful');
+            if (userInfo) {
+                const userData = {
+                    uid: userInfo.user.uid,
+                    name: userInfo.user.displayName,
+                    email: userInfo.user.email,
+                    photoURL: userInfo.user.photoURL,
+                };
 
-                } else {
-                    console.log('Sign-in was cancelled or no idToken returned');
-                }
+                console.log("SIGN_IN_SUCCESS", userData);
+                dispatch(loginSuccess(userData));
             }
         } catch (error) {
-            dispatch(loggedOut());
-            if (error?.code) {
-                switch (error.code) {
-                    case statusCodes.SIGN_IN_CANCELLED:
-                        console.log('SIGN_IN_CANCELLED');
-                        break;
-                    case statusCodes.IN_PROGRESS:
-                        console.log('Sign-in already in progress');
-                        break;
-                    case statusCodes.PLAY_SERVICES_NOT_AVAILABLE:
-                        console.log('Play Services not available or outdated');
-                        break;
-                    default:
-                        console.log('Google Sign-In error:', error);
-                        break;
-                }
-            } else {
-                console.log('An unexpected error occurred:', error);
-            }
+            console.log("Google Sign-In error:", error);
+            setToastMessage("Google Sign-In failed");
+            dispatch(loginFailure(error.message || "Google Sign-In failed"));
         } finally {
             setIsSigningIn(false);
-            console.log('SignIn False:',);
         }
     };
+
+
 
     return (
         <View
@@ -103,7 +86,7 @@ export default function LoginScreen({navigation}) {
                     style={styles.logoImage}
                     resizeMode="contain"
                 />
-                <BlurView
+                <View
                     style={styles.blurBox}
                     blurType={isDarkMode ? 'dark' : 'light'}
                     blurAmount={10}
@@ -116,7 +99,7 @@ export default function LoginScreen({navigation}) {
                     >
                         Welcome to My App
                     </Text>
-                </BlurView>
+                </View>
             </View>
 
             {/* Loader OR Button */}
@@ -142,55 +125,17 @@ export default function LoginScreen({navigation}) {
                     </Text>
                 </TouchableOpacity>
             )}
+            <CustomToastMessage
+                visible={toastVisible}
+                message={toastMessage}
+                backgroundColorDynamic={isDarkMode ? '#3d3b3b' : '#4cd251'}
+                position="bottom"
+                duration={3000}
+                onHide={() => setToastVisible(false)}
+                mode={isDarkMode}
+                emojiFront={''}
+            />
         </View>
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'space-between',
-        paddingBottom: 60
-    },
-    imageContainer: {
-        width: '100%',
-        alignItems: 'center',
-        marginTop: 40,
-    },
-    logoImage: {
-        width: 160,
-        height: 160,
-    },
-    blurBox: {
-        marginTop: 20,
-        paddingHorizontal: 16,
-        paddingVertical: 8,
-        borderRadius: 12,
-        overflow: 'hidden',
-    },
-    glassText: {
-        fontSize: 20,
-        fontWeight: '600',
-        textAlign: 'center',
-    },
-    buttonContainer: {
-        justifyContent: 'center',
-        alignSelf: 'center',
-        padding: 12,
-        width: '90%',
-        borderRadius: 12,
-    },
-    signInBtnTxt: {
-        fontSize: 18,
-        fontWeight: '600',
-        alignSelf: 'center',
-    },
-    loaderContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 12,
-        width: '90%',
-        alignSelf: 'center',
-        marginBottom: 20,
-    },
-});

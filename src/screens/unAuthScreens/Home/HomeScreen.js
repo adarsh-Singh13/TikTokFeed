@@ -27,7 +27,7 @@ export default function HomeScreen({ navigation }) {
             setToastMessage( 'Welcome back!');
           } else {
             setToastMessage('🎉 Welcome! You are logged in successfully.');
-            await AsyncStorage.setItem('hasShownLoginToast', 'true'); // ✅ Persist flag
+            await AsyncStorage.setItem('hasShownLoginToast', 'true');
           }
           setToastVisible(true);
         } catch (error) {
